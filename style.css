@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    margin-top: 100px;
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 10px;
+    background-color: rgba(114, 114, 114, 0.952);
+}
+
+.item-1{
+    width: 650px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.item-2{
+    width: 650px;
+    height: 80px;
+    margin: 0 5px;
+}
+
+.button {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right:5px;
+}
