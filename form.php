@@ -41,6 +41,7 @@
                                 printf('<option selected value="%d">%d год</option>', $values['year'], $values['year']);
                             }
                             ?>                            
+                            <option selected value="3123123"> ssssss</option>
                         </select>
                     </div>
                         
