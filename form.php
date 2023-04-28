@@ -39,7 +39,7 @@
                         
                         
                         <div class="item-1">
-                            <label for="gender">Пол:</label>
+                            <label for="gender" <?php if ($errors['r1']) {print 'class="error"';}?> >Пол:</label>
                             <input type="radio" name="r1[]" id="gender" value="male" <?php if ($errors['r1']) {print 'class="error" ';}
                             if($values['r1'] == "male") {print 'checked';} ?>> Мужской
                             <input type="radio" name="r1[]" value="female" value="female" <?php if ($errors['r1']) {print 'class="error" ';}
@@ -48,7 +48,7 @@
             
                         
                         <div class="item-1">
-                            <label for="limbs">Количество конечностей: </label>
+                            <label for="limbs" <?php if ($errors['r2']) {print 'class="error"';}?>>Количество конечностей: </label>
                             <input type="radio" name="r2[]" value="2" id="limbs" <?php if ($errors['r2']) {print 'class="error" ';}
                             if($values['r2'] == 2) {print 'checked';} ?>>2
                             <input type="radio" name="r2[]" value="3" <?php if ($errors['r2']) {print 'class="error" ';}
@@ -69,7 +69,7 @@
             
                         <div class="item-2">
                             <label for="biography">Биография: </label>
-                            <textarea name="biography" id="biography"></textarea>
+                            <textarea name="biography" id="biography" <?php if ($errors['biography']) {print 'class="error"';}?> value="<?php print $values['biography']; ?>" ></textarea>
                         </div>
                 
                             
