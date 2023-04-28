@@ -24,14 +24,14 @@
                 <div class="aba">
                     <div class="item-1">
                         <label for="fio">Имя: </label>
-                        <input type="text" name="fio" id="fio" placeholder="Введите имя">
+                        <input type="text" name="fio" id="fio" <?php if ($errors['fio']) {print 'class="error"';} ?> value="<?php print $values['fio']; ?>" >
                         <label for="email">Почта: </label>
-                        <input type="email" name="email" id="email" placeholder="Введите почту">
+                        <input type="email" name="email" id="email" <?php if ($errors['email']) {print 'class="error"';}?> value="<?php print $values['email']; ?>" >
                     </div>
                         
                     <div class="item-1">
                         <label for="year">Год рождения: </label>
-                        <select name="year" id="year">
+                        <select name="year" id="year" <?php if ($errors['year']) {print 'class="error"';} ?> value="<?php print $values['year']; ?>" >
                             <?php 
                                 for ($i = 1922; $i <= 2022; $i++) {
                                 printf('<option value="%d">%d год</option>', $i, $i);
