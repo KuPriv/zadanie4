@@ -32,7 +32,7 @@
                             <option selected value=""></option>
                             <?php 
                                 for ($i = 1922; $i <= 2022; $i++) {
-                                    if($i == $values['year'] and $errors['year']){
+                                    if($i == $values['year']){
                                         printf('<option selected value="%d">%d год</option>', $i, $i);
                                     }
                                 else{
@@ -69,11 +69,11 @@
                         <div class="item-2">
                             <select multiple="multiple" name="abilities[]" id="abilities" <?php if ($errors['abilities']) {print 'class="error"';}?>>
                                 <option value="Immortality" 
-                                <?php if($errors['abilities'] and in_array("Immortality", $values['abilities'])) {print 'selected';}?>>Бессмертие</option>
+                                <?php if(in_array("Immortality", $values['abilities'])) {print 'selected';}?>>Бессмертие</option>
                                 <option value="Passing through walls" 
-                                <?php if($errors['abilities'] and in_array("Passing through walls", $values['abilities'])) {print 'selected';}?>>Прохождение сквозь стены</option>
+                                <?php if(in_array("Passing through walls", $values['abilities'])) {print 'selected';}?>>Прохождение сквозь стены</option>
                                 <option value="Levitation" 
-                                <?php if($errors['abilities'] and in_array("Levitation", $values['abilities'])) {print 'selected';}?>>Левитация</option>
+                                <?php if(in_array("Levitation", $values['abilities'])) {print 'selected';}?>>Левитация</option>
                                 </select>
                         </div>
             
