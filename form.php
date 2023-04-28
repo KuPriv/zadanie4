@@ -28,11 +28,17 @@
                         
                     <div class="item-1">
                         <label for="year">Год рождения: </label>
-                        <select name="year" id="year">
+                        <select name="year" id="year" <?php if($errors['year']) {print 'class="error'}?>>
+                            <option selected value=""></option>
                             <?php 
                                 for ($i = 1922; $i <= 2022; $i++) {
-                                printf('<option value="%d">%d год</option>', $i, $i);
+                                    if($i == $values['year'] and $errors['year']){
+                                        printf('<option selected value="%d">%d год</option>', $i, $i);
+                                    }
+                                else{
+                                    printf('<option value="%d">%d год</option>', $i, $i);}
                              }
+
                             ?>                            
                         </select>
                     </div>
