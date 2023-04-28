@@ -3,9 +3,6 @@
         <link rel="stylesheet" href="style.css"></link>
         <style>
             <?php include 'style.css'; ?>
-            .error {
-                border: 2px solid red;
-            }
         </style>
     </head>
     <body>
@@ -43,8 +40,10 @@
                         
                         <div class="item-1">
                             <label for="gender">Пол:</label>
-                            <input type="radio" name="r1[]" id="gender"> Мужской
-                            <input type="radio" name="r1[]" value="female"> Женский
+                            <input type="radio" name="r1[]" id="gender" value="male" <?php if ($errors['r1']) {print 'class="error" ';}
+                            if($values['r1'][0] == "male") {print '"checked" '} ?>> Мужской
+                            <input type="radio" name="r1[]" value="female" value="female" <?php if ($errors['r1']) {print 'class="error" ';}
+                            if($values['r1'][0] == "female") {print '"checked"'} ?>> Женский
                         </div>
             
                         
