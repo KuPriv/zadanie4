@@ -50,13 +50,13 @@
                         <div class="item-1">
                             <label for="limbs">Количество конечностей: </label>
                             <input type="radio" name="r2[]" value="2" id="limbs" <?php if ($errors['r2']) {print 'class="error" ';}
-                            if($values['r2'][0] == 2) {print 'checked';} ?>>2
+                            if($values['r2'] == 2) {print 'checked';} ?>>2
                             <input type="radio" name="r2[]" value="3" <?php if ($errors['r2']) {print 'class="error" ';}
-                            if($values['r2'][0] == 3) {print 'checked';} ?>>3
+                            if($values['r2'] == 3) {print 'checked';} ?>>3
                             <input type="radio" name="r2[]" value="4" <?php if ($errors['r2']) {print 'class="error" ';}
-                            if($values['r2'][0] == 4) {print 'checked';} ?>>4
+                            if($values['r2'] == 4) {print 'checked';} ?>>4
                             <input type="radio" name="r2[]" value="many" <?php if ($errors['r2']) {print 'class="error" ';}
-                            if($values['r2'][0] == "many") {print 'checked';} ?>>больше
+                            if($values['r2'] == "many") {print 'checked';} ?>>больше
                         </div>
             
                         <div class="item-2">
