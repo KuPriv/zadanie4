@@ -43,8 +43,8 @@
                         
                         <div class="item-1">
                             <label for="gender">Пол:</label>
-                            <input type="radio" name="r1[]" value="male" id="gender"> Мужской
-                            <input type="radio" name="r1[]" value="female" > Женский
+                            <input type="radio" name="r1[]" id="gender" <?php if ($errors['r1']) {print 'class="error"';} ?> value="<?php print $values['r1']; ?>"> Мужской
+                            <input type="radio" name="r1[]" value="female" <?php if ($errors['r1']) {print 'class="error"';} ?> value="<?php print $values['r1']; ?>"> Женский
                         </div>
             
                         
