@@ -28,7 +28,7 @@
                         
                     <div class="item-1">
                         <label for="year">Год рождения: </label>
-                        <select name="year" id="year" <?php if($errors['year']) {print 'class="error';}?>>
+                        <select name="year" id="year" <?php if($errors['year']) {print 'class="error"';}?>>
                             <option selected value=""></option>
                             <?php 
                                 for ($i = 1922; $i <= 2022; $i++) {
