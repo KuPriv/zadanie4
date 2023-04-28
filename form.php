@@ -41,9 +41,9 @@
                         <div class="item-1">
                             <label for="gender">Пол:</label>
                             <input type="radio" name="r1[]" id="gender" value="male" <?php if ($errors['r1']) {print 'class="error" ';}
-                            if($values['r1'] == "male") {print '"checked" ';} ?>> Мужской
+                            if($values['r1'] == "male") {print 'checked';} ?>> Мужской
                             <input type="radio" name="r1[]" value="female" value="female" <?php if ($errors['r1']) {print 'class="error" ';}
-                            if($values['r1'] == "female") {print '"checked" ';} ?>> Женский
+                            if($values['r1'] == "female") {print 'checked';} ?>> Женский
                         </div>
             
                         
