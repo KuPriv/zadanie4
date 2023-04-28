@@ -79,7 +79,7 @@
             
                         <div class="item-2">
                             <label for="biography">Биография: </label>
-                            <textarea name="biography" id="biography" <?php if ($errors['biography']) {print 'class="error"';}?> value="<?php print $values['biography']; ?>" ></textarea>
+                            <textarea name="biography" id="biography" <?php if ($errors['biography']) {print 'class="error"';}?>><?php print $values['biography']; ?></textarea>
                         </div>
                 
                             
