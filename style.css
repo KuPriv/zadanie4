@@ -31,3 +31,8 @@ form{
 .error {
     border: 2px solid red;
 }
+
+#messages {
+    text-align: center;
+    width: 50px;
+}
