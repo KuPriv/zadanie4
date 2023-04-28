@@ -9,6 +9,16 @@
         </style>
     </head>
     <body>
+    <?php
+        if (!empty($messages)) {
+            print('<div id="messages">');
+            // Выводим все сообщения.
+            foreach ($messages as $message) {
+                print($message);
+            }
+            print('</div>');
+        }
+    ?>
         <div class="container">
             <form action="" method="POST">  
                 <div class="aba">
