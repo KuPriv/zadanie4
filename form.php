@@ -31,11 +31,15 @@
                         
                     <div class="item-1">
                         <label for="year">Год рождения: </label>
-                        <select name="year" id="year" <?php if ($errors['year']) {print 'class="error"';} ?> value="<?php print $values['year']; ?>" >
+                        <select name="year" id="year" <?php if ($errors['year']) {print 'class="error"';} ?>>
                             <?php 
                                 for ($i = 1922; $i <= 2022; $i++) {
                                 printf('<option value="%d">%d год</option>', $i, $i);
                              }
+                             
+                             if ($errors['year']) {
+                                printf('<option selected value="%d">%d год</option>', $values['year'], $values['year']);
+                            }
                             ?>                            
                         </select>
                     </div>
@@ -43,8 +47,8 @@
                         
                         <div class="item-1">
                             <label for="gender">Пол:</label>
-                            <input type="radio" name="r1[]" id="gender" <?php if ($errors['r1']) {print 'class="error"';} ?> value="<?php print $values['r1']; ?>"> Мужской
-                            <input type="radio" name="r1[]" value="female" <?php if ($errors['r1']) {print 'class="error"';} ?> value="<?php print $values['r1']; ?>"> Женский
+                            <input type="radio" name="r1[]" id="gender"> Мужской
+                            <input type="radio" name="r1[]" value="female"> Женский
                         </div>
             
                         
