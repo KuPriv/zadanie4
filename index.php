@@ -159,7 +159,7 @@ else {
   }
   else {
     // Сохраняем ранее введенное в форму значение на месяц.
-    setcookie('r1_value', $_POST['r1'], time() + 30 * 24 * 60 * 60);
+    setcookie('r1_value', $_POST['r1'][0], time() + 30 * 24 * 60 * 60);
   }
 
   if(!isset($_POST['abilities'])){
