@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['email'] = empty($_COOKIE['email_value']) ? '' : $_COOKIE['email_value'];
   $values['biography'] = empty($_COOKIE['biography_value']) ? '' : $_COOKIE['biography_value'];
   $values['r1'] = empty($_COOKIE['r1_value']) ? '' : $_COOKIE['r1_value'];
-  $values['abilities'] = empty($_COOKIE['abilities_value']) ? '' : $_COOKIE['abilities_value'];
+  $values['abilities'] = empty($_COOKIE['abilities_value']) ? '' : unrealize($_COOKIE['abilities_value'], ["allowed_classes" => false]);
   $values['r2'] = empty($_COOKIE['r2_value']) ? '' : $_COOKIE['r2_value'];
   $values['cb'] = empty($_COOKIE['cb_value']) ? '' : $_COOKIE['cb_value'];
   // TODO: аналогично все поля.
@@ -168,7 +168,7 @@ else {
   }
   else {
     // Сохраняем ранее введенное в форму значение на месяц.
-    setcookie('abilities_value', $_POST['abilities'], time() + 30 * 24 * 60 * 60);
+    setcookie('abilities_value', serialize($_POST['abilities']), time() + 30 * 24 * 60 * 60);
   }
   
   if(!isset($_POST['r2'])){
