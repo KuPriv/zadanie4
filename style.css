@@ -28,3 +28,6 @@ form{
     margin-bottom: 10px;
     margin-right:5px;
 }
+.error {
+    border: 2px solid red;
+}
