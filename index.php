@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // Складываем признак ошибок в массив.
   $errors = array();
   $errors['fio'] = !empty($_COOKIE['fio_error']);
+  $errors['email'] = !empty($_COOKIE['email_error']);
   $errors['year'] = !empty($_COOKIE['year_error']);
   $errors['biography'] = !empty($_COOKIE['biography_error']);
   $errors['r1'] = !empty($_COOKIE['r1_error']);
@@ -42,6 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Выводим сообщение.
     $messages[] = '<div class="error">Заполните имя.</div>';
   }
+
+  if ($errors['email']) {
+    // Удаляем куку, указывая время устаревания в прошлом.
+    setcookie('email_error', '', 100000);
+    // Выводим сообщение.
+    $messages[] = '<div class="error">Заполните почту.</div>';
+  }
+
   if ($errors['year']) {
     // Удаляем куку, указывая время устаревания в прошлом.
     setcookie('year_error', '', 100000);
