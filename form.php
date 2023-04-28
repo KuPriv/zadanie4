@@ -56,7 +56,7 @@
                             <input type="radio" name="r2[]" value="4" <?php if ($errors['r2']) {print 'class="error" ';}
                             if($values['r2'][0] == 4) {print 'checked';} ?>>4
                             <input type="radio" name="r2[]" value="many" <?php if ($errors['r2']) {print 'class="error" ';}
-                            if($values['r2'][0] == "many") {print 'checked'} ?>>больше
+                            if($values['r2'][0] == "many") {print 'checked';} ?>>больше
                         </div>
             
                         <div class="item-2">
